@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mutya Portfolio</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+/* BACKGROUND */
+body{
+  min-height:100vh;
+  background: linear-gradient(135deg,#1f1c2c,#928dab);
+  color:#fff;
+}
+
+/* NAVBAR */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.navbar h2{
+  font-weight:600;
+}
+
+.nav-links{
+  display:flex;
+  gap:15px;
+}
+
+.nav-links a{
+  padding:8px 15px;
+  border-radius:8px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  background:rgba(255,255,255,0.2);
+}
+
+/* MAIN */
+.main{
+  padding:30px;
+}
+
+.page{ display:none; animation:fade 0.4s ease; }
+.active{ display:block; }
+
+/* PROFILE */
+.profile{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.profile img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  border:4px solid #00ffd5;
+  box-shadow:0 0 25px rgba(0,255,213,0.5);
+}
+
+.profile h1{ margin-top:15px; }
+.profile p{ opacity:0.8; }
+
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.card{
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  border-radius:15px;
+  padding:20px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* BUTTON */
+button{
+  margin-top:10px;
+  padding:10px 20px;
+  border:none;
+  border-radius:8px;
+  background: linear-gradient(45deg,#00ffd5,#00aaff);
+  color:#000;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* VIEW BUTTON */
+.viewBtn{
+  display:inline-block;
+  margin-top:10px;
+  padding:8px 15px;
+  border-radius:8px;
+  background:#00ffd5;
+  color:#000;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* INPUT */
+input{
+  margin-top:10px;
+  padding:8px;
+  border-radius:8px;
+  border:none;
+  width:100%;
+}
+
+/* MESSAGE */
+.message{
+  margin-top:10px;
+  font-size:14px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+}
+
+/* ANIMATION */
+@keyframes fade{
+  from{opacity:0; transform:translateY(10px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <h2>My Portfolio</h2>
+  <div class="nav-links">
+    <a onclick="showPage('home')">Home</a>
+    <a onclick="showPage('dashboard')">Dashboard</a>
+    <a onclick="showPage('quiz')">Quiz</a>
+    <a onclick="showPage('lab')">Lab</a>
+    <a onclick="showPage('exam')">Exam</a>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+<!-- HOME -->
+<div id="home" class="page active">
+  <div class="profile">
+    <img src="c:\Users\User\Desktop\emjay\662290127_1928708324443118_7426054074896512856_n.jpg">
+    <h1>Mutya, Mark Joon</h1>
+     <p> 251100381</p>
+    <p>BS Computer Science</p>
+  </div>
+
+  <div class="card">
+    <h2>About Me</h2>
+    <p>I love coding, music, and creativity and i love to learn something new.</p>
+  </div>
+</div>
+<div class="card">
+    <h2>Skills</h2>
+    
+      playing guitar</li>
+      c++</li>
+      song writing</li>
+      
+    </ul>
+    
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="page">
+  <h1>Dashboard</h1>
+  <div class="cards">
+
+    <div class="card">
+      <h3>Quiz 1</h3>
+      <a id="viewQuiz1" href="c:\Users\User\Desktop\emjay\quiz 1.jpg" target="_blank" class="viewBtn">View Photo</a>
+    </div>
+
+    <div class="card">
+      <h3>Quiz 2</h3>
+      <a id="viewQuiz2" href="c:\Users\User\Desktop\emjay\quiz2.jpg" target="_blank" class="viewBtn">View Photo</a>
+    </div>
+
+    <div class="card">
+      <h3>Quiz 3</h3>
+      <a id="viewQuiz3" href="c:\Users\User\Desktop\emjay\3.jpg" target="_blank" class="viewBtn">View Photo</a>
+    </div>
+
+    <div class="card">
+      <h3>Lab Work</h3>
+      <a id="viewLab" href="c:\Users\User\Desktop\emjay\lab.jpg" target="_blank" class="viewBtn">View Photo</a>
+    </div>
+
+    <div class="card">
+      <h3>Major Exam</h3>
+      <a id="viewExam" href="#" target="_blank" class="viewBtn">View Photo</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- QUIZ -->
+<div id="quiz" class="page">
+  <h1>Quiz Upload</h1>
+  <div class="card">
+    <input type="file" id="quizFile1">
+    <button onclick="submitQuiz(1)">Submit</button>
+    <p id="quizMsg1" class="message"></p>
+  </div>
+</div>
+
+<!-- LAB -->
+<div id="lab" class="page">
+  <h1>Lab Upload</h1>
+  <div class="card">
+    <input type="file" id="labFile">
+    <button onclick="submitLab()">Submit</button>
+    <p id="labMsg" class="message"></p>
+  </div>
+</div>
+
+<!-- EXAM -->
+<div id="exam" class="page">
+  <h1>Exam Upload</h1>
+  <div class="card">
+    <input type="file" id="examFile">
+    <button onclick="submitExam()">Submit</button>
+    <p id="examMsg" class="message"></p>
+  </div>
+</div>
+
+</div>
+
+<script>
+function showPage(pageId){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(pageId).classList.add('active');
+}
+
+function submitQuiz(num){
+  const file = document.getElementById('quizFile'+num).files[0];
+  const msg = document.getElementById('quizMsg'+num);
+
+  if(!file){
+    msg.textContent="Select file";
+    msg.style.color="red";
+    return;
+  }
+
+  const url = URL.createObjectURL(file);
+  document.getElementById('viewQuiz'+num).href = url;
+
+  msg.textContent="Uploaded!";
+  msg.style.color="lightgreen";
+}
+
+function submitLab(){
+  const file = document.getElementById('labFile').files[0];
+  const msg = document.getElementById('labMsg');
+
+  if(!file){
+    msg.textContent="Select file";
+    msg.style.color="red";
+    return;
+  }
+
+  const url = URL.createObjectURL(file);
+  document.getElementById('viewLab').href = url;
+
+  msg.textContent="Uploaded!";
+  msg.style.color="lightgreen";
+}
+
+function submitExam(){
+  const file = document.getElementById('examFile').files[0];
+  const msg = document.getElementById('examMsg');
+
+  if(!file){
+    msg.textContent="Select file";
+    msg.style.color="red";
+    return;
+  }
+
+  const url = URL.createObjectURL(file);
+  document.getElementById('viewExam').href = url;
+
+  msg.textContent="Uploaded!";
+  msg.style.color="lightgreen";
+}
+</script>
+
+</body>
+</html>
